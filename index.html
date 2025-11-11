@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="estilos.css"/>
-    <title>Ejemplo HTML con CSS</title>
-
+    <title>Menu Principal - Jose Fuentes Soriano</title>
+    <meta name="description" content="Página principal con enlaces a mis prácticas de restaurante y horario.">
+    <meta name="keywords" content="menu, restaurante, horario, prácticas, HTML, CSS">
+    <meta name="author" content="Jose Fuentes Soriano">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
-    <header>
-        <h1>JOSE FUENTES SORIANO</h1>
+    <header class="header">
+        <h1>Jose Fuentes Soriano</h1>
     </header>
 
-
-    <main>
-        <h2>Mis Practicas</h2>
-        <a href="/RestauranteCss/html/index.html">RESTAURANTE</a>
-        <a href="/Horario/horario.html">HORARIO</a>
+    <main class="main-content">
+        <section class="practicas">
+            <h2>Mis Prácticas</h2>
+            <div class="enlaces">
+                <a class="boton" href="/RestauranteCss/html/index.html">Restaurante</a>
+                <a class="boton" href="/Horario/horario.html">Horario</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2025 Mi Menu principal</p>
+    <footer class="footer">
+        <p>© 2025 Mi Menú Principal</p>
     </footer>
-
 </body>
 </html>
