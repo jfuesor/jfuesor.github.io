@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseña de Plato - Deja tu opinión</title>
+    <link rel="stylesheet" href="../css/style-reseña.css">
+</head>
+<body>
+    <div class="review-container">
+        <header class="review-header">
+            <h1 class="review-title">Deja tu reseña del plato</h1>
+        </header>
+
+        <form class="review-form" method="post" action="#">
+            <!-- Información básica -->
+            <div class="form-field">
+                <label class="field-label" for="nombre">Tu nombre</label>
+                <input class="text-input" type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-field">
+                <label class="field-label" for="plato">Nombre del plato</label>
+                <input class="text-input" type="text" id="plato" name="plato" placeholder="Ej: Paella marinera" required>
+            </div>
+
+            <!-- Valoración con estrellas -->
+            <div class="form-field">
+                <label class="field-label">Valoración</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+            </div>
+
+            <!-- Reseña -->
+            <div class="form-field">
+                <label class="field-label" for="reseña">Tu reseña</label>
+                <textarea class="review-input" id="reseña" name="reseña" placeholder="¿Qué te pareció el plato? ¿Recomendarías algún cambio?" required></textarea>
+                <div class="char-counter">
+                    <span id="charCount">0</span> / 1000
+                </div>
+            </div>
+
+            <!-- Recomendación -->
+            <div class="form-field">
+                <label class="field-label">¿Recomendarías este plato?</label>
+                <div class="recommend-options">
+                    <label class="radio-option">
+                        <input type="radio" name="recomendacion" value="si" required>
+                        <span>Sí</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="recomendacion" value="no" required>
+                        <span>No</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="recomendacion" value="talvez" required>
+                        <span>Tal vez</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botón de enviar -->
+            <div class="form-actions">
+                <button class="btn btn-review" type="submit">ENVIAR RESEÑA</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Contador de caracteres
+        document.getElementById('reseña').addEventListener('input', function() {
+            const charCount = this.value.length;
+            document.getElementById('charCount').textContent = charCount;
+            
+            // Cambiar color cuando se acerca al límite
+            const counter = this.parentElement.querySelector('.char-counter');
+            if (charCount > 900) {
+                counter.style.color = '#e53935';
+            } else if (charCount > 800) {
+                counter.style.color = '#f57c00';
+            } else {
+                counter.style.color = '#666';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -2,33 +2,199 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario II</title>
-    <meta name="description" content="Formulario II">
-    <meta name="keywords" content="formulario, html">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario II - Club Amigos de la Informática</title>
+    <link rel="stylesheet" href="style-form2.css">
 </head>
 <body>
+    <div class="form-container">
+        <header class="form-header">
+            <h1 class="form-number">2 Formulario II</h1>
+            <p class="form-description">
+                *Rellena el siguiente cuestionario para formar parte del club de "Amigos de la informática"*
+            </p>
+        </header>
 
-<header><h1>Formulario II</h1></header>
-<nav class="menu"><a href="index.html">Inicio</a></nav>
+        <form class="club-form" method="post" action="#">
+            <!-- Sección de datos personales -->
+            <section class="form-section personal-info-section">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="field-label" for="nombre">**Nombre:**</label>
+                        <input class="text-input" type="text" id="nombre" name="nombre">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field field-large">
+                        <label class="field-label" for="domicilio">**Domicilio:** <span class="field-hint"><calle, numero y localidad></span></label>
+                        <input class="text-input" type="text" id="domicilio" name="domicilio" placeholder="Calle, número y localidad">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="field-label" for="pais">**País de origen:**</label>
+                        <input class="text-input" type="text" id="pais" name="pais" value="España">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label" for="fechaNacimiento">**Fecha de nacimiento:**</label>
+                        <input class="text-input date-input" type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="field-label" for="email">**Correo electrónico:**</label>
+                        <input class="text-input" type="email" id="email" name="email">
+                    </div>
+                    <div class="form-field">
+                        <label class="field-label" for="telefono">**Teléfono:**</label>
+                        <input class="text-input" type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="field-label">**Estado civil:**</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="soltero" name="estadoCivil" value="soltero">
+                                <label class="radio-label" for="soltero">Solter@</label>
+                            </div>
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="casado" name="estadoCivil" value="casado">
+                                <label class="radio-label" for="casado">Casad@</label>
+                            </div>
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="separado" name="estadoCivil" value="separado">
+                                <label class="radio-label" for="separado">Separad@</label>
+                            </div>
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="viudo" name="estadoCivil" value="viudo">
+                                <label class="radio-label" for="viudo">Vind@</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label class="field-label">**Sexo:**</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="hombre" name="sexo" value="hombre">
+                                <label class="radio-label" for="hombre">Hombre</label>
+                            </div>
+                            <div class="radio-option">
+                                <input class="radio-input" type="radio" id="mujer" name="sexo" value="mujer">
+                                <label class="radio-label" for="mujer">Mujer</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<main>
-<section class="box">
-<form>
-    <label>Email:
-        <input type="email" required>
-    </label>
+            <!-- Línea separadora -->
+            <hr class="section-divider">
 
-    <label>Contraseña:
-        <input type="password" required>
-    </label>
+            <!-- Sección de información adicional -->
+            <section class="form-section additional-info-section">
+                <h2 class="section-subtitle">*Otra información de interés*</h2>
+                
+                <div class="devices-table">
+                    <div class="table-row">
+                        <div class="table-cell">**Móvil**</div>
+                        <div class="table-cell">
+                            <input class="checkbox-input" type="checkbox" id="movil" name="dispositivos" value="movil">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">**Tablet**</div>
+                        <div class="table-cell">
+                            <input class="checkbox-input" type="checkbox" id="tablet" name="dispositivos" value="tablet">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">**Ordenador**</div>
+                        <div class="table-cell">
+                            <input class="checkbox-input" type="checkbox" id="ordenador" name="dispositivos" value="ordenador">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">**Ébook**</div>
+                        <div class="table-cell">
+                            <input class="checkbox-input" type="checkbox" id="ebook" name="dispositivos" value="ebook">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <button>Enviar</button>
-</form>
-</section>
-</main>
+            <!-- Sección de componentes electrónicos -->
+            <section class="form-section components-section">
+                <label class="section-label" for="componentes">**Seleccione los componentes electrónicos con los que habitualmente trabajas:**</label>
+                <textarea class="text-area" id="componentes" name="componentes" rows="3"></textarea>
+            </section>
 
-<footer><p>IES Inca Garcilaso</p></footer>
+            <!-- Sección de actividades favoritas -->
+            <section class="form-section activities-section">
+                <label class="section-label">**Seleccione tus actividades favoritas:**</label>
+                <div class="checkbox-grid">
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="deporte" name="actividades" value="deporte">
+                        <label class="checkbox-label" for="deporte">Hacer deporte</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="amigos" name="actividades" value="amigos">
+                        <label class="checkbox-label" for="amigos">Salir con mis amigos</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="series" name="actividades" value="series">
+                        <label class="checkbox-label" for="series">Ver series, pelis,...</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="senderismo" name="actividades" value="senderismo">
+                        <label class="checkbox-label" for="senderismo">Realizar rutas de senderismo</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="cine" name="actividades" value="cine">
+                        <label class="checkbox-label" for="cine">Ir al cine</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input class="checkbox-input" type="checkbox" id="musica" name="actividades" value="musica">
+                        <label class="checkbox-label" for="musica">Escuchar música</label>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Sección de motivación -->
+            <section class="form-section motivation-section">
+                <label class="section-label" for="motivacion">**Explique brevemente el motivo por el que desea ingresar en nuestro club:**</label>
+                <textarea class="text-area" id="motivacion" name="motivacion" rows="4"></textarea>
+            </section>
+
+            <!-- Sección de película favorita -->
+            <section class="form-section movie-section">
+                <label class="section-label" for="pelicula">**Elige o escribe tu peli favorita:**</label>
+                <div class="movie-select">
+                    <select class="select-input" id="peliculaSelect" name="peliculaSelect">
+                        <option value="">-- Selecciona una película --</option>
+                        <option value="matrix">Matrix</option>
+                        <option value="starwars">Star Wars</option>
+                        <option value="harrypotter">Harry Potter</option>
+                        <option value="lotr">El Señor de los Anillos</option>
+                        <option value="pulpfiction">Pulp Fiction</option>
+                        <option value="otra">Otra...</option>
+                    </select>
+                    <span class="select-or">o</span>
+                    <input class="text-input movie-input" type="text" id="peliculaCustom" name="peliculaCustom" placeholder="Escribe tu película favorita">
+                </div>
+            </section>
+
+            <!-- Botones de acción -->
+            <div class="form-actions">
+                <button class="btn btn-submit" type="submit">Enviar</button>
+                <button class="btn btn-cancel" type="reset">Cancelar</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
