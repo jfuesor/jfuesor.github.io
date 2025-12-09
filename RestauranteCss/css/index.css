@@ -1,40 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+header.box {
+    background-color: #0078D7;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
 
-        h1 {
-            color: darkred;
-            text-align: center;
-        }
+h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin: 0;
+}
 
-        h2 {
-            color: brown;
-            text-align: center;
-        }
+main.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        img {
-            display: block;
-            margin: 20px auto;
-        }
+section.box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
+h2 {
+    color: #0078D7;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        li {
-            margin: 8px 0;
-        }
+.img-restaurante {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+}
 
-        a {
-            text-decoration: none;
-            color: darkred;
-        }
+section.box p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #555;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+ul.lista-recetas {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.lista-recetas li {
+    margin: 10px 0;
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+.lista-recetas a {
+    text-decoration: none;
+    color: #0078D7;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #0078D7;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.lista-recetas a:hover {
+    background-color: #0078D7;
+    color: white;
+}
+
+footer.box {
+    background-color: #0078D7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+footer.box p {
+    margin: 0;
+    font-size: 1rem;
+}
