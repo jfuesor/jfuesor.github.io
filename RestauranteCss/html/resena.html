@@ -13,7 +13,7 @@
         </header>
 
         <form class="review-form" method="post" action="#">
-            <!-- Información básica -->
+
             <div class="form-field">
                 <label class="field-label" for="nombre">Tu nombre</label>
                 <input class="text-input" type="text" id="nombre" name="nombre" required>
@@ -24,7 +24,6 @@
                 <input class="text-input" type="text" id="plato" name="plato" placeholder="Ej: Paella marinera" required>
             </div>
 
-            <!-- Valoración con estrellas -->
             <div class="form-field">
                 <label class="field-label">Valoración</label>
                 <div class="star-rating">
@@ -45,7 +44,7 @@
                 </div>
             </div>
 
-            <!-- Reseña -->
+
             <div class="form-field">
                 <label class="field-label" for="reseña">Tu reseña</label>
                 <textarea class="review-input" id="reseña" name="reseña" placeholder="¿Qué te pareció el plato? ¿Recomendarías algún cambio?" required></textarea>
@@ -54,7 +53,6 @@
                 </div>
             </div>
 
-            <!-- Recomendación -->
             <div class="form-field">
                 <label class="field-label">¿Recomendarías este plato?</label>
                 <div class="recommend-options">
@@ -73,7 +71,7 @@
                 </div>
             </div>
 
-            <!-- Botón de enviar -->
+
             <div class="form-actions">
                 <button class="btn btn-review" type="submit">ENVIAR RESEÑA</button>
             </div>
@@ -87,24 +85,5 @@
         </form>
     </div>
 
-    
-
-    <script>
-        // Contador de caracteres
-        document.getElementById('reseña').addEventListener('input', function() {
-            const charCount = this.value.length;
-            document.getElementById('charCount').textContent = charCount;
-            
-            // Cambiar color cuando se acerca al límite
-            const counter = this.parentElement.querySelector('.char-counter');
-            if (charCount > 900) {
-                counter.style.color = '#e53935';
-            } else if (charCount > 800) {
-                counter.style.color = '#f57c00';
-            } else {
-                counter.style.color = '#666';
-            }
-        });
-    </script>
 </body>
 </html>

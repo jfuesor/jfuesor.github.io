@@ -1,351 +1,94 @@
-/* ===== RESET Y ESTILOS BASE ===== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #f9f9f9;
 }
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
-.restaurant-container {
-    max-width: 800px;
-    width: 100%;
+.cabecera {
+    text-align: center;
+    padding: 30px;
+    color: #b37a5c;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-reserva {
     background-color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     padding: 40px;
-    border-radius: 15px;
-    border: 1px solid #e0e0e0;
-    position: relative;
-    overflow: hidden;
+    width: 700px;
+    border: 1px solid #ddd;
 }
 
-.restaurant-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(to right, #d4a574, #b5834f, #8b4513);
-    border-radius: 15px 15px 0 0;
-}
 
-/* ===== ENCABEZADO ===== */
-.reservation-header {
-    text-align: center;
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.reservation-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 25%;
-    right: 25%;
-    height: 3px;
-    background: linear-gradient(to right, #d4a574, #8b4513);
-    border-radius: 2px;
-}
-
-.reservation-title {
-    font-size: 32px;
-    color: #8b4513;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== FORMULARIO ===== */
-.reservation-form {
-    padding: 10px 0;
-}
-
-/* ===== FILAS DEL FORMULARIO ===== */
-.form-row {
+.formulario .fila {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 25px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.form-row-single {
-    margin-bottom: 30px;
-}
-
-/* ===== CAMPOS DEL FORMULARIO ===== */
-.form-field {
+.campo {
     flex: 1;
-    min-width: 250px;
 }
 
-.field-label {
-    display: block;
-    font-size: 15px;
-    color: #5d4037;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* ===== INPUTS DE TEXTO ===== */
-.text-input {
+.campo input,
+.campo textarea {
     width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #d7ccc8;
-    border-radius: 8px;
-    font-size: 15px;
-    color: #5d4037;
-    background-color: #fffaf0;
-    transition: all 0.3s ease;
-    font-family: 'Segoe UI', sans-serif;
+    padding: 12px;
+    border: 1px solid #ccc;
 }
 
-.text-input:focus {
-    outline: none;
-    border-color: #8b4513;
-    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15);
-    background-color: #ffffff;
+.campo textarea {
+    height: 100px;
+    resize: none;
 }
 
-.text-input::placeholder {
-    color: #a1887f;
-    opacity: 0.8;
+.campo-textarea {
+    flex: 100%;
 }
 
-/* ===== INPUT DE FECHA ===== */
-.date-input {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%235d4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>');
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 20px;
-    cursor: pointer;
-}
 
-.date-input::-webkit-calendar-picker-indicator {
-    opacity: 0;
-    cursor: pointer;
-}
-
-/* ===== SELECT ===== */
-.select-input {
-    width: 100%;
-    padding: 14px 16px;
-    border: 2px solid #d7ccc8;
-    border-radius: 8px;
-    font-size: 15px;
-    color: #5d4037;
-    background-color: #fffaf0;
-    cursor: pointer;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%235d4037" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    background-size: 20px;
-    transition: all 0.3s ease;
-}
-
-.select-input:focus {
-    outline: none;
-    border-color: #8b4513;
-    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15);
-    background-color: #ffffff;
-}
-
-/* ===== ÁREA DE MENSAJE ===== */
-.message-input {
-    width: 100%;
-    padding: 16px;
-    border: 2px solid #d7ccc8;
-    border-radius: 8px;
-    font-size: 15px;
-    color: #5d4037;
-    background-color: #fffaf0;
-    font-family: 'Segoe UI', sans-serif;
-    resize: vertical;
-    min-height: 120px;
-    transition: all 0.3s ease;
-    line-height: 1.5;
-}
-
-.message-input:focus {
-    outline: none;
-    border-color: #8b4513;
-    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15);
-    background-color: #ffffff;
-}
-
-.message-input::placeholder {
-    color: #a1887f;
-    opacity: 0.8;
-}
-
-/* ===== BOTÓN DE RESERVA ===== */
-.form-actions {
-    text-align: center;
-    margin: 35px 0 25px;
-}
-
-.btn-reservation {
-    background: linear-gradient(145deg, #8b4513, #a0522d);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 18px 40px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
-    display: inline-flex;
-    align-items: center;
+.boton {
     justify-content: center;
-    gap: 12px;
-    min-width: 250px;
 }
 
-.btn-reservation:hover {
-    background: linear-gradient(145deg, #a0522d, #8b4513);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+button {
+    background-color: #b37a5c;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.btn-reservation:active {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 10px rgba(139, 69, 19, 0.3);
+button:hover {
+    background-color: #9c654a;
 }
 
-.btn-icon {
-    font-size: 20px;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
-}
 
-/* ===== POLÍTICA DE PRIVACIDAD ===== */
-.privacy-section {
+.politica {
     text-align: center;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    margin-top: 20px;
+    font-size: 12px;
 }
 
-.privacy-text {
-    font-size: 14px;
-    color: #795548;
-    line-height: 1.6;
-    margin: 0;
+.politica a {
+    color: #555;
+    text-decoration: underline;
 }
 
-.privacy-link {
-    color: #8b4513;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px dotted #8b4513;
-    transition: all 0.2s ease;
-}
-
-.privacy-link:hover {
-    color: #d2691e;
-    border-bottom: 1px solid #d2691e;
-}
-
-/* ===== VALIDACIÓN ===== */
-.text-input:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: #e53935;
-    background-color: #ffebee;
-}
-
-.text-input:valid:not(:focus):not(:placeholder-shown) {
-    border-color: #4caf50;
-    background-color: #e8f5e9;
-}
-
-/* ===== RESPONSIVIDAD ===== */
-@media (max-width: 768px) {
-    .restaurant-container {
-        padding: 25px 20px;
-        margin: 10px;
-    }
-    
-    .reservation-title {
-        font-size: 26px;
-    }
-    
-    .form-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .form-field {
-        min-width: 100%;
-    }
-    
-    .btn-reservation {
-        width: 100%;
-        min-width: auto;
-        padding: 16px 30px;
-        font-size: 16px;
-    }
-    
-    .privacy-text {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .restaurant-container {
-        padding: 20px 15px;
-    }
-    
-    .reservation-title {
-        font-size: 22px;
-    }
-    
-    .text-input,
-    .select-input,
-    .message-input {
-        padding: 12px 14px;
-        font-size: 14px;
-    }
-    
-    .field-label {
-        font-size: 14px;
-    }
-    
-    .btn-reservation {
-        padding: 14px 25px;
-        font-size: 15px;
-        gap: 8px;
-    }
-}
-
-
-/* ===== DECORACIÓN ADICIONAL ===== */
-.restaurant-container::after {
-    content: '🍽️';
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    font-size: 60px;
-    opacity: 0.1;
-    transform: rotate(15deg);
-    pointer-events: none;
+.pie {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #777;
 }
