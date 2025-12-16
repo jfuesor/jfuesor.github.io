@@ -2,132 +2,119 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Hoja de inscripción en ciclos formativos de grado superior">
+    <meta name="keywords" content="inscripción, ciclos formativos, grado superior">
+    <meta name="author" content="Tu Nombre">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Inscripción - Ciclos Formativos de Grado Superior</title>
+    <title>Hoja de inscripción</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="form-container">
-        <header class="form-header">
-            <h1 class="form-number">1 Formulario I.</h1>
-            <h2 class="form-title">HOJA DE INSCRIPCIÓN</h2>
-            <h3 class="form-subtitle">EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h3>
-        </header>
-        
-        <form class="inscription-form" method="post" action="#">
 
-            <section class="form-section personal-data-section">
-                <h4 class="section-title">Datos Personales</h4>
-                
-                <div class="form-row">
-                    <div class="form-field">
-                        <label class="field-label" for="nombre">Nombre:</label>
-                        <input class="text-input" type="text" id="nombre" name="nombre">
-                    </div>
-                    <div class="form-field">
-                        <label class="field-label" for="apellidos">Apellidos:</label>
-                        <input class="text-input" type="text" id="apellidos" name="apellidos">
-                    </div>
-                    <div class="form-field">
-                        <label class="field-label" for="dni">DNI</label>
-                        <input class="text-input" type="text" id="dni" name="dni">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-field">
-                        <label class="field-label" for="localidad">Localidad de Nacimiento</label>
-                        <input class="text-input" type="text" id="localidad" name="localidad">
-                    </div>
-                    <div class="form-field">
-                        <label class="field-label" for="provincia">Provincia:</label>
-                        <input class="text-input" type="text" id="provincia" name="provincia" value="Huelva">
-                    </div>
-                    <div class="form-field">
-                        <label class="field-label" for="fechaNacimiento">Fecha de Nacimiento</label>
-                        <input class="text-input date-input" type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="Ed / mr / sasa">
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-field field-large">
-                        <label class="field-label" for="direccion">Dirección</label>
-                        <input class="text-input" type="text" id="direccion" name="direccion">
-                    </div>
-                    <div class="form-field">
-                        <label class="field-label" for="codigoPostal">Código Postal:</label>
-                        <input class="text-input" type="text" id="codigoPostal" name="codigoPostal">
-                    </div>
-                </div>
-            </section>
+<header class="cabecera">
+    <h1>HOJA DE INSCRIPCIÓN</h1>
+    <h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+</header>
 
-            <section class="form-section access-section">
-                <h4 class="section-title">Forma de Acceso</h4>
-                
-                <div class="options-container">
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="director" name="acceso" value="director">
-                        <label class="checkbox-label" for="director">Director</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="bachillerato" name="acceso" value="bachillerato">
-                        <label class="checkbox-label" for="bachillerato">Bachillerato Log Modalidad</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="experimental" name="acceso" value="experimental">
-                        <label class="checkbox-label" for="experimental">Experimental</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="cou" name="acceso" value="cou">
-                        <label class="checkbox-label" for="cou">COU Opción</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="fp2" name="acceso" value="fp2">
-                        <label class="checkbox-label" for="fp2">FP2</label>
-                    </div>
-                    <div class="checkbox-option option-with-input">
-                        <input class="checkbox-input" type="checkbox" id="otros" name="acceso" value="otros">
-                        <label class="checkbox-label" for="otros">Otros (especifique)</label>
-                        <input class="specify-input" type="text" id="otrosEspecifique" name="otrosEspecifique">
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="pruebaLibre" name="acceso" value="pruebaLibre">
-                        <label class="checkbox-label" for="pruebaLibre">Prueba Libre</label>
-                    </div>
-                </div>
-            </section>
-            
+<main class="contenedor">
+<section class="formulario-inscripcion">
 
-            <section class="form-section documents-section">
-                <h4 class="section-title">Documentos Adjuntados</h4>
-                
-                <div class="options-container">
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="fotocopiaDNI" name="documentos" value="fotocopiaDNI">
-                        <label class="checkbox-label" for="fotocopiaDNI">Fotocopia DNI</label>
-                    </div>
-                    <div class="checkbox-option">
-                        <input class="checkbox-input" type="checkbox" id="certificadoAcademico" name="documentos" value="certificadoAcademico">
-                        <label class="checkbox-label" for="certificadoAcademico">Certificado Académico</label>
-                    </div>
-                    <div class="checkbox-option option-with-input">
-                        <input class="checkbox-input" type="checkbox" id="otrosDocumentos" name="documentos" value="otrosDocumentos">
-                        <label class="checkbox-label" for="otrosDocumentos">Otros documentos (especifique)</label>
-                        <input class="specify-input" type="text" id="otrosDocumentosEspecifique" name="otrosDocumentosEspecifique">
-                    </div>
-                </div>
-            </section>
-            
+<form>
 
-            <div class="form-actions">
-                <button class="btn btn-submit" type="submit">Enviar Solicitud</button>
-                <button class="btn btn-reset" type="reset">Limpiar datos</button>
-            </div>
-<div>
-            <a href="../index.html">Volver al Menú Principal</a>
-        </div>
 
-        </form>
+<fieldset class="caja datos">
+    <legend>Datos Personales</legend>
+
+    <div class="fila">
+        <label>Nombre:
+            <input type="text">
+        </label>
+        <label>Apellidos:
+            <input type="text">
+        </label>
+        <label>DNI:
+            <input type="text">
+        </label>
     </div>
+
+    <div class="fila">
+        <label>Localidad de Nacimiento:
+            <input type="text">
+        </label>
+        <label>Provincia:
+            <select>
+                <option>Huelva</option>
+                <option>Sevilla</option>
+            </select>
+        </label>
+        <label>Fecha de Nacimiento:
+            <input type="date">
+        </label>
+    </div>
+
+    <div class="fila">
+        <label class="completo">Dirección:
+            <input type="text">
+        </label>
+        <label>Código Postal:
+            <input type="text">
+        </label>
+    </div>
+</fieldset>
+
+
+<fieldset class="caja acceso">
+    <legend>Forma de Acceso</legend>
+
+    <label>
+        <input type="radio" name="acceso"> Directo
+    </label>
+
+    <div class="opciones">
+        <label><input type="radio" name="opcion"> Bachillerato LOG Modalidad
+            <input type="text">
+        </label>
+
+        <label><input type="radio" name="opcion"> Experimental</label>
+
+        <label><input type="radio" name="opcion"> COU Opción
+            <input type="text">
+        </label>
+
+        <label><input type="radio" name="opcion"> FP2</label>
+
+        <label><input type="radio" name="opcion"> Otros (especifique)
+            <input type="text">
+        </label>
+    </div>
+
+    <label>
+        <input type="radio" name="acceso"> Prueba Libre
+    </label>
+</fieldset>
+
+
+<fieldset class="caja documentos">
+    <legend>Documentos Adjuntados</legend>
+
+    <label><input type="checkbox"> Fotocopia DNI</label>
+    <label><input type="checkbox"> Certificado Académico</label>
+    <label>Otros documentos:
+        <input type="text">
+    </label>
+</fieldset>
+
+
+<div class="botones">
+    <button type="submit">Enviar Solicitud</button>
+    <button type="reset">Limpiar datos</button>
+    
+    <a href="index.html" class="btn-menu">Menú principal</a>
+</div>
+
+</form>
+</section>
+</main>
+
 </body>
 </html>
