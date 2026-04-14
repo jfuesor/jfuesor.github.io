@@ -10,6 +10,7 @@ function cambiarParrafo() {
     p.innerHTML += " <strong>Texto añadido en negrita</strong>";
 }
 
+//querySelectorAll("td")
 function cambiarCeldas() {
     document.getElementById("c1").innerHTML = "Nueva Celda 1";
     document.getElementById("c2").innerHTML = "Nueva Celda 2";
