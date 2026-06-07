@@ -1,0 +1,2 @@
+app.innerHTML=`<input id=a><input id=b><button onclick='f()'>Comparar</button><p id=r></p>`;
+function f(){r.textContent=a.value.length>b.value.length?a.value+' es más larga':b.value.length>a.value.length?b.value+' es más larga':'Iguales';}

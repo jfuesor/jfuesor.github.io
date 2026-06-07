@@ -1,0 +1,1 @@
+app.innerHTML=`<input id=a><input id=b><button onclick='r.textContent=+a.value + +b.value'>+</button><button onclick='r.textContent=a.value-b.value'>-</button><button onclick='r.textContent=a.value*b.value'>*</button><button onclick='r.textContent=a.value/b.value'>/</button><p id=r></p>`;

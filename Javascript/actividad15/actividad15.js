@@ -1,0 +1,3 @@
+const agenda={};app.innerHTML=`<input id=dni placeholder=DNI><input id=nom placeholder=Nombre><input id=tel placeholder=Telefono><button onclick='g()'>Guardar</button><button onclick='b()'>Buscar</button><p id=r></p>`;
+function g(){agenda[dni.value]={nombre:nom.value,telefono:tel.value};r.textContent='Guardado';}
+function b(){let x=agenda[dni.value];r.textContent=x?x.nombre+' '+x.telefono:'No encontrado';}

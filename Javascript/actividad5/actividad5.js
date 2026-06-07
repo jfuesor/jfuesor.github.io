@@ -1,0 +1,2 @@
+document.getElementById('app').innerHTML=`<input id=n><button onclick='f()'>Ver</button><p id=r></p>`;
+function f(){let n=+n.value;r.textContent=n==1?'Primavera':n==2?'Verano':n==3?'Otoño':n==4?'Invierno':'Número inválido';}

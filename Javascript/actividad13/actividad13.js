@@ -1,0 +1,2 @@
+let pos='Norte';app.innerHTML=`<p>Adivina: Norte/Sur/Este/Oeste</p><input id=d><button onclick='f()'>Ir</button><p id=r></p>`;
+function f(){r.textContent=d.value==='Este'?'¡Tesoro encontrado!':'Sigue buscando';}

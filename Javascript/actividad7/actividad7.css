@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    background: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.caja {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+select, button {
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background: #eee;
+    display: none;
+    text-align: left;
+}
